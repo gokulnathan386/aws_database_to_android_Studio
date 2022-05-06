@@ -16,9 +16,9 @@ public class ShowActivity extends AppCompatActivity {
 
 
     public static final String DATABASE_NAME = "nam";
-    public static final String url = "jdbc:mysql://database-1.ce3udfzrdpxd.ap-south-1.rds.amazonaws.com:3306/" +
+    public static final String url = "jdbc:mysql://don't-copy-this.ap-south-1.rds.amazonaws.com:3306/" +
             DATABASE_NAME;
-    public static final String username = "admin", password = "Amanharshit1";
+    public static final String username = "admin", password = "";
 
     public static final String TABLE_NAME = "user_vit";
 //    public final String name_COLUMN = "name";
