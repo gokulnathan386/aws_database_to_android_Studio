@@ -1,6 +1,7 @@
 package com.namit.awsmysql;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,12 +16,12 @@ public class ShowActivity extends AppCompatActivity {
     TextView t1;
 
 
-    public static final String DATABASE_NAME = "nam";
-    public static final String url = "jdbc:mysql://don't-copy-this.ap-south-1.rds.amazonaws.com:3306/" +
+    public static final String DATABASE_NAME = "dexter_live";
+    public static final String url = "jdbc:mysql://cargobee.cygd38p10i6h.us-east-1.rds.amazonaws.com:3306/" +
             DATABASE_NAME;
-    public static final String username = "admin", password = "";
+    public static final String username = "admin", password = "e$3B6WsGb21A#rz8NKx7D";
 
-    public static final String TABLE_NAME = "user_vit";
+    public static final String TABLE_NAME = "master_customer_operation";
 //    public final String name_COLUMN = "name";
 //    public final String place_COLUMN = "place";
 
@@ -50,7 +51,9 @@ public class ShowActivity extends AppCompatActivity {
 
                 ResultSet rs = statement.executeQuery("SELECT * FROM " + TABLE_NAME);
                 while (rs.next()) {
-                    records.append("Name: ").append(rs.getString(1)).append(", Place: ").append(rs.getString(3)).append("\n");
+                   // records.append("Name: ").append(rs.getString(1)).append(", Place: ").append(rs.getString(3)).append("\n");
+                    Log.d("Gokulnathan2-->","" +rs.getString(1)+rs.getString(2));
+                    records.append(rs.getString(2));
                 }
 
                 connection.close();
